@@ -51,5 +51,5 @@ alias ....='cd ../../../../'
 alias .....='cd ../../../../../'
 alias b-='cd -'
 alias cd-d='cd ~/Desktop/'
-alias dump-history='cd ~/Documents && history > \"history$(date +"%y-%m-%d")\"'
+alias dump-history='export HISTORY_TODAY="history$(date +"%y-%m-%d")" && cd ~/projects/terminal-history/ && history | cut -c 8- >> $HISTORY_TODAY && git add $HISTORY_TODAY && git commit -m "Adding $HISTORY_TODAY" && git push origin master'
 EOL
