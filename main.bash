@@ -3,7 +3,6 @@ set -x #echo on
 
 cd ~
 echo ". .aliases" >> .bashrc
-echo ". .work-aliases" >> .bashrc
 
 # Vim configurations
 cat > .vimrc << EOL
@@ -79,9 +78,8 @@ new-issue() { git checkout -b "issue-$1"; }
 new-feat() { git checkout -b "feature-$1"; }
 new-hotfix() { git checkout -b "hotfix-$1"; }
 commit-issue() { git commit -m "$(git rev-parse --abbrev-ref HEAD) - $1"; }
+
+# Work aliases
+# TODO
 EOL
 
-# My work aliases
-cat > .work-aliases << EOL
-# Work aliases
-EOL
